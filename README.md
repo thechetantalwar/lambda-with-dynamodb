@@ -24,7 +24,7 @@
     * Go to your SNS Topic Page
     * Click on Edit Button
     * Click on Access Policy to expand it
-    * Replace the json data with the one in [this file]https://github.com/thechetantalwar/lambda-with-dynamodb/blob/master/policy.json)
+    * Replace the json data with the one in [this file](https://github.com/thechetantalwar/lambda-with-dynamodb/blob/master/policy.json)
     * Before saving the Policy changes, just update few values stating "Your_AWS_Account_Id","YOUR_S3_Bucket_ARN","Your_SNS_Topic_ARN" values in the code
     * You can get the Account id by clicking your User name in the Management Console
     * Your S3 bucket ARN will be "arn:aws:s3:::YOUR_BUCKET_NAME"
