@@ -1,5 +1,5 @@
 ## Use Case
-* ![Use Case Diagram](https://github.com/thechetantalwar/lambda-with-dynamodb/blob/master/diagram.jpeg?raw=true)
+![Use Case Diagram](https://github.com/thechetantalwar/lambda-with-dynamodb/blob/master/diagram.jpeg?raw=true)
 ## Instructions to implement
 * Create a S3 bucket with the help of AWS CLI, put your bucket name in the command (it should be globally unique)
     * aws s3 mb s3://your_bucket_name
