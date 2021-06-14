@@ -1,0 +1,47 @@
+{
+  "Version": "2008-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__default_statement_ID",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "SNS:GetTopicAttributes",
+        "SNS:SetTopicAttributes",
+        "SNS:AddPermission",
+        "SNS:RemovePermission",
+        "SNS:DeleteTopic",
+        "SNS:Subscribe",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:Publish",
+        "SNS:Receive"
+      ],
+      "Resource": "Your_SNS_Topic_ARN",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceOwner": "Your_AWS_Account_Id"
+        }
+      }
+    },
+    {
+      "Sid": "s3",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "Your_SNS_Topic_ARN",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "Your_AWS_Account_Id"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "YOUR_S3_Bucket_ARN"
+        }
+      }
+    }
+  ]
+}
